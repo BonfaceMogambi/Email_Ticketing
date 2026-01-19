@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sacco Ticketing</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 40px;
+            color: #333;
+        }
+        .header {
+            text-align: center;
+            border-bottom: 3px solid #2E86C1;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        .section {
+            margin-bottom: 30px;
+            page-break-inside: avoid;
+        }
+        h1 {
+            color: #2E86C1;
+            font-size: 28px;
+        }
+        h2 {
+            color: #2E86C1;
+            border-bottom: 2px solid #2E86C1;
+            padding-bottom: 5px;
+            margin-top: 25px;
+        }
+        h3 {
+            color: #1B4F72;
+            margin-top: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #2E86C1;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .code-block {
+            background-color: #f5f5f5;
+            border-left: 4px solid #2E86C1;
+            padding: 15px;
+            margin: 15px 0;
+            font-family: 'Courier New', monospace;
+            white-space: pre-wrap;
+        }
+        .note {
+            background-color: #E8F4FD;
+            border-left: 4px solid #2E86C1;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        .warning {
+            background-color: #FDEBD0;
+            border-left: 4px solid #F39C12;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 12px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h1>Sacco Ticket Management System</h1>
+    <h2>System Documentation</h2>
+    <p><strong>Version:</strong> 1.0.0 | <strong>Date:</strong> October 2025 | <strong>Status:</strong> Editable</p>
+</div>
+
+<div class="section">
+    <h2>Document Control</h2>
+    <table>
+        <tr>
+            <th>Document Version</th>
+            <td>1.0.0</td>
+        </tr>
+        <tr>
+            <th>Date Created</th>
+            <td>October 2025</td>
+        </tr>
+        <tr>
+            <th>Last Updated</th>
+            <td>October 2025</td>
+        </tr>
+        <tr>
+            <th>Author</th>
+            <td>System Developer - BMOGAMBI</td>
+        </tr>
+        <tr>
+            <th>Status</th>
+            <td>Continuing</td>
+        </tr>
+        <tr>
+            <th>Audience</th>
+            <td>System Administrators, IT Staff, End Users</td>
+        </tr>
+    </table>
+</div>
+
+<div class="section">
+    <h2>Table of Contents</h2>
+    <ol>
+        <li><a href="#executive-summary">Executive Summary</a></li>
+        <li><a href="#system-overview">System Overview</a></li>
+        <li><a href="#architecture-design">Architecture & Design</a></li>
+        <li><a href="#user-guide">User Guide</a></li>
+        <li><a href="#administration-guide">Administration Guide</a></li>
+        <li><a href="#technical-specifications">Technical Specifications</a></li>
+        <li><a href="#troubleshooting">Troubleshooting</a></li>
+        <li><a href="#appendices">Appendices</a></li>
+    </ol>
+</div>
+
+<div class="section">
+    <h2 id="executive-summary">1. Executive Summary</h2>
+    
+    <h3>Business Problem</h3>
+    <p>The Sacco Support Desk at Co-op Bank was experiencing challenges in efficiently managing incoming customer queries through email. Manual processing led to delayed responses, lost tickets, and difficulty in tracking performance metrics.</p>
+    
+    <h3>Solution</h3>
+    <p>The Sacco Ticket Management System automates the entire email-to-ticket lifecycle, providing:</p>
+    <ul>
+        <li><strong>Automated Ticket Creation</strong> from incoming emails</li>
+        <li><strong>Intelligent Assignment</strong> to available staff members</li>
+        <li><strong>AI-Powered Analysis</strong> for sentiment and urgency detection</li>
+        <li><strong>Comprehensive Analytics</strong> for performance monitoring</li>
+        <li><strong>Real-time Dashboard</strong> for operational oversight</li>
+    </ul>
+    
+    <h3>Key Benefits</h3>
+    <table>
+        <tr>
+            <th>Benefit</th>
+            <th>Impact</th>
+        </tr>
+        <tr>
+            <td>Reduced Manual Processing</td>
+            <td>95% reduction in manual ticket processing time</td>
+        </tr>
+        <tr>
+            <td>24/7 Automation</td>
+            <td>Continuous email monitoring and ticket creation</td>
+        </tr>
+        <tr>
+            <td>Data-Driven Insights</td>
+            <td>AI-powered analysis for better decision making</td>
+        </tr>
+        <tr>
+            <td>Enhanced Customer Experience</td>
+            <td>Faster response times and improved satisfaction</td>
+        </tr>
+    </table>
+</div>
+
+<div class="section">
+    <h2 id="system-overview">2. System Overview</h2>
+    
+    <h3>2.1 System Purpose</h3>
+    <p>The Sacco Ticket Management System is an enterprise-grade solution designed to streamline customer support operations by automatically converting email queries into structured tickets, intelligently assigning them to support staff, and providing comprehensive analytics for performance optimization.</p>
+    
+    <h3>2.2 Key Features</h3>
+    
+    <h4>🤖 AI-Powered Automation</h4>
+    <ul>
+        <li><strong>Automatic Email Processing</strong>: Continuous IMAP monitoring of support inbox</li>
+        <li><strong>Sentiment Analysis</strong>: Real-time emotion detection in customer communications</li>
+        <li><strong>Urgency Classification</strong>: Intelligent priority assignment based on content analysis</li>
+        <li><strong>Smart Insights</strong>: Automated generation of actionable insights for support staff</li>
+    </ul>
+    
+    <h4>🎫 Ticket Management</h4>
+    <ul>
+        <li><strong>Automated Routing</strong>: Round-robin assignment to available support agents</li>
+        <li><strong>Lifecycle Tracking</strong>: Complete audit trail from creation to resolution</li>
+        <li><strong>Priority Management</strong>: Dynamic priority adjustment based on content analysis</li>
+        <li><strong>Resolution Tracking</strong>: Structured closure process with documentation</li>
+    </ul>
+    
+    <h3>2.3 System Users</h3>
+    <table>
+        <tr>
+            <th>Role</th>
+            <th>Responsibilities</th>
+            <th>Access Level</th>
+        </tr>
+        <tr>
+            <td><strong>System Administrator</strong></td>
+            <td>Full system management, user administration, analytics</td>
+            <td>Full Access</td>
+        </tr>
+        <tr>
+            <td><strong>IT Staff</strong></td>
+            <td>Ticket resolution, personal analytics, basic reporting</td>
+            <td>Limited Access</td>
+        </tr>
+        <tr>
+            <td><strong>Support Agent (coming up)</strong></td>
+            <td>Ticket management, customer communication</td>
+            <td>Operational Access</td>
+        </tr>
+    </table>
+</div>
+
+<div class="section">
+    <h2 id="architecture-design">3. Architecture & Design</h2>
+    
+    <h3>3.1 System Architecture</h3>
+    <div class="code-block">
+┌─────────────────┐    ┌──────────────────┐    ┌─────────────────┐
+│   Email Server  │────│  Streamlit Web   │────│   MySQL Database│
+│  (Office 365)   │    │   Application    │    │                 │
+└─────────────────┘    └──────────────────┘    └─────────────────┘
+         │                        │                        │
+         │                        │                        │
+┌─────────────────┐    ┌──────────────────┐    ┌─────────────────┐
+│  IMAP Protocol  │    │  AI Processing   │    │  Analytics Engine│
+│   Integration   │    │     Engine       │    │                 │
+└─────────────────┘    └──────────────────┘    └─────────────────┘
+    </div>
+    
+    <h3>3.2 Database Schema</h3>
+    
+    <h4>Users Table</h4>
+    <div class="code-block">
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    email VARCHAR(255) UNIQUE NOT NULL,
+    password_hash VARCHAR(255) NOT NULL,
+    name VARCHAR(255) NOT NULL,
+    role ENUM('Admin', 'IT Staff') DEFAULT 'IT Staff',
+    is_active BOOLEAN DEFAULT TRUE,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    last_login DATETIME,
+    INDEX idx_email (email),
+    INDEX idx_role (role)
+);
+    </div>
+    
+    <h4>Tickets Table</h4>
+    <div class="code-block">
+CREATE TABLE tickets (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    message_id VARCHAR(255) UNIQUE,
+    subject TEXT,
+    sender_email VARCHAR(255),
+    sender_name VARCHAR(255),
+    body LONGTEXT,
+    assigned_to VARCHAR(255),
+    status ENUM('open', 'closed') DEFAULT 'open',
+    priority ENUM('low', 'medium', 'high', 'urgent') DEFAULT 'medium',
+    sentiment_score FLOAT DEFAULT 0.0,
+    urgency_level ENUM('normal', 'high', 'urgent') DEFAULT 'normal',
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    assigned_at DATETIME,
+    resolved_at DATETIME,
+    resolved_by VARCHAR(255),
+    resolution_notes TEXT,
+    admin_notes TEXT,
+    ai_insights TEXT,
+    INDEX idx_status (status),
+    INDEX idx_assigned_to (assigned_to),
+    INDEX idx_priority (priority),
+    INDEX idx_created_at (created_at)
+);
+    </div>
+</div>
+
+<div class="section">
+    <h2 id="user-guide">4. User Guide</h2>
+    
+    <h3>4.1 Getting Started</h3>
+    
+    <h4>System Access</h4>
+    <ol>
+        <li><strong>URL</strong>: Navigate to the provided system URL</li>
+        <li><strong>Login</strong>: Use your assigned credentials</li>
+        <li><strong>First Time</strong>: Change default password upon first login</li>
+    </ol>
+    
+    <h4>Default Credentials</h4>
+    <table>
+        <tr>
+            <th>Role</th>
+            <th>Email</th>
+            <th>Default Password</th>
+        </tr>
+        <tr>
+            <td>Admin</td>
+            <td>eotieno@co-opbank.co.ke</td>
+            <td>**masked**</td>
+        </tr>
+        <tr>
+            <td>IT Staff</td>
+            <td>bmogambi@co-opbank.co.ke</td>
+            <td>admin123</td>
+        </tr>
+        <tr>
+            <td>IT Staff</td>
+            <td>llesiit@co-opbank.co.ke</td>
+            <td>**masked**</td>
+        </tr>
+        <tr>
+            <td>IT Staff</td>
+            <td>bnyakundi@co-opbank.co.ke</td>
+            <td>**masked**</td>
+        </tr>
+    </table>
+    
+    <div class="warning">
+        <strong>Security Notice:</strong> Change default passwords immediately after first login.
+    </div>
+    
+    <h3>4.2 Dashboard Navigation</h3>
+    
+    <h4>Main Dashboard Features</h4>
+    <ul>
+        <li><strong>KPI Overview</strong>: Real-time ticket statistics</li>
+        <li><strong>Trend Analysis</strong>: 30-day ticket volume trends</li>
+        <li><strong>Sentiment Tracking</strong>: Customer satisfaction metrics</li>
+        <li><strong>Urgency Distribution</strong>: Priority level breakdown</li>
+    </ul>
+    
+    <h4>Navigation Menu</h4>
+    <table>
+        <tr>
+            <th>Menu Item</th>
+            <th>Description</th>
+            <th>Access Level</th>
+        </tr>
+        <tr>
+            <td>📊 AI Dashboard</td>
+            <td>System overview and key metrics</td>
+            <td>All Users</td>
+        </tr>
+        <tr>
+            <td>🎫 Ticket Management</td>
+            <td>Ticket assignment and resolution</td>
+            <td>All Users</td>
+        </tr>
+        <tr>
+            <td>👥 User Management</td>
+            <td>User administration</td>
+            <td>Admin Only</td>
+        </tr>
+        <tr>
+            <td>📈 Advanced Analytics</td>
+            <td>Performance reports and trends</td>
+            <td>Admin Only</td>
+        </tr>
+        <tr>
+            <td>⚙️ Settings</td>
+            <td>Overal system settings</td>
+            <td>Admin Only</td>
+        </tr>
+    </table>
+</div>
+
+<div class="section">
+    <h2 id="administration-guide">5. Administration Guide</h2>
+    
+    <h3>5.1 System Administration</h3>
+    
+    <h4>User Management</h4>
+    <p><strong>Adding New Users:</strong></p>
+    <ol>
+        <li>Navigate to <strong>👥 User Management</strong></li>
+        <li>Select <strong>➕ Add New User</strong> tab</li>
+        <li>Complete required fields:
+            <ul>
+                <li>Full Name</li>
+                <li>Email Address</li>
+                <li>Role (Admin/IT Staff)</li>
+                <li>Temporary Password</li>
+            </ul>
+        </li>
+        <li>System automatically sends welcome email</li>
+    </ol>
+    
+    <h4>System Configuration</h4>
+    
+    <h5>Email Settings</h5>
+    <div class="code-block">
+# Configuration Structure
+EMAIL_ADDRESS = "saccodesksupport@co-opbank.co.ke"
+IMAP_SERVER = "outlook.office365.com"
+IMAP_PORT = 993
+FETCH_INTERVAL = 15  # minutes
+    </div>
+    
+    <h3>5.2 Performance Monitoring</h3>
+    
+    <h4>Key Performance Indicators</h4>
+    <table>
+        <tr>
+            <th>Metric</th>
+            <th>Target</th>
+            <th>Measurement Frequency</th>
+        </tr>
+        <tr>
+            <td>Ticket Response Time</td>
+            <td>&lt; 40 Minutes</td>
+            <td>Real-time</td>
+        </tr>
+        <tr>
+            <td>Resolution Rate</td>
+            <td>&gt; 90%</td>
+            <td>Daily</td>
+        </tr>
+        <tr>
+            <td>Customer Sentiment</td>
+            <td>&gt; 0.2 (Positive)</td>
+            <td>Weekly</td>
+        </tr>
+        <tr>
+            <td>First Contact Resolution</td>
+            <td>&gt; 90%</td>
+            <td>Weekly</td>
+        </tr>
+    </table>
+</div>
+
+<div class="section">
+    <h2 id="technical-specifications">6. Technical Specifications</h2>
+    
+    <h3>6.1 System Requirements</h3>
+    
+    <h4>Hardware Requirements</h4>
+    <table>
+        <tr>
+            <th>Component</th>
+            <th>Minimum</th>
+            <th>Recommended</th>
+        </tr>
+        <tr>
+            <td>CPU</td>
+            <td>2 cores</td>
+            <td>4 cores</td>
+        </tr>
+        <tr>
+            <td>RAM</td>
+            <td>4GB</td>
+            <td>8GB</td>
+        </tr>
+        <tr>
+            <td>Storage</td>
+            <td>10GB</td>
+            <td>50GB</td>
+        </tr>
+        <tr>
+            <td>Network</td>
+            <td>50Mbps</td>
+            <td>1Gbps</td>
+        </tr>
+    </table>
+    
+    <h4>Software Requirements</h4>
+    <ul>
+        <li><strong>Python</strong>: 3.8 or higher</li>
+        <li><strong>MySQL</strong>: 5.7 or higher</li>
+        <li><strong>Streamlit</strong>: 1.28 or higher</li>
+        <li><strong>Operating System</strong>: Windows/Linux/macOS</li>
+    </ul>
+    
+    <h3>6.2 Installation Procedure</h3>
+    
+    <h4>Step 1: Environment Setup</h4>
+    <div class="code-block">
+# Create virtual environment
+python -m venv sacco_env
+source sacco_env/bin/activate  # Linux/macOS
+sacco_env\Scripts\activate     # Windows
+
+# Install dependencies
+pip install streamlit pandas mysql-connector-python
+pip install imap-tools plotly textblob python-dotenv
+    </div>
+    
+    <h4>Step 2: Database Configuration</h4>
+    <div class="code-block">
+-- Create database
+CREATE DATABASE sacco_tickets;
+
+-- Create dedicated user
+CREATE USER 'sacco_desk_user'@'localhost' IDENTIFIED BY 'secure_password';
+GRANT ALL PRIVILEGES ON sacco_tickets.* TO 'sacco_desk_user'@'localhost';
+FLUSH PRIVILEGES;
+    </div>
+</div>
+
+<div class="section">
+    <h2 id="troubleshooting">7. Troubleshooting</h2>
+    
+    <h3>7.1 Common Issues & Solutions</h3>
+    
+    <h4>Email Connection Issues</h4>
+    <p><strong>Problem</strong>: Cannot connect to email server</p>
+    <p><strong>Solution</strong>:</p>
+    <ol>
+        <li>Verify email credentials in environment variables</li>
+        <li>Check network connectivity to email server</li>
+        <li>Confirm IMAP access is enabled on email account</li>
+        <li>Verify firewall rules allow outbound connections</li>
+    </ol>
+    
+    <h4>Database Connection Problems</h4>
+    <p><strong>Problem</strong>: Database connection failures</p>
+    <p><strong>Solution</strong>:</p>
+    <ol>
+        <li>Verify MySQL service is running</li>
+        <li>Check database credentials in environment variables</li>
+        <li>Confirm network connectivity to database server</li>
+        <li>Verify database user permissions</li>
+    </ol>
+    
+    <div class="note">
+        <strong>Pro Tip:</strong> Always check application logs first for detailed error information.
+    </div>
+</div>
+
+<div class="section">
+    <h2 id="appendices">8. Appendices</h2>
+    
+    <h3>Appendix A: Configuration Reference</h3>
+    
+    <h4>Environment Variables</h4>
+    <table>
+        <tr>
+            <th>Variable</th>
+            <th>Description</th>
+            <th>Default</th>
+            <th>Required</th>
+        </tr>
+        <tr>
+            <td>MYSQL_HOST</td>
+            <td>Database server hostname</td>
+            <td>localhost</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>MYSQL_USER</td>
+            <td>Database username</td>
+            <td>root</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>MYSQL_PASSWORD</td>
+            <td>Database password</td>
+            <td>-</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>EMAIL_ADDRESS</td>
+            <td>Support email address</td>
+            <td>-</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>EMAIL_PASSWORD</td>
+            <td>Email account password</td>
+            <td>-</td>
+            <td>Yes</td>
+        </tr>
+    </table>
+    
+    <h3>Appendix B: Frequently Asked Questions</h3>
+    
+    <h4>General Questions</h4>
+    <p><strong>Q: How often does the system check for new emails?</strong><br>
+    A: The system checks every 15 minutes by default, configurable in settings.</p>
+    
+    <p><strong>Q: Can I use my mobile device to access the system?</strong><br>
+    A: Yes, the system is mobile-responsive and can be accessed from any modern web browser.</p>
+    
+    <h4>Technical Questions</h4>
+    <p><strong>Q: How is data backed up?</strong><br>
+    A: Automated daily database backups with 30-day retention. System configuration backups weekly.</p>
+    
+    <p><strong>Q: What monitoring is in place?</strong><br>
+    A: Comprehensive monitoring including system health, performance metrics, error rates, and security events.</p>
+</div>
+
+<div class="section">
+    <h2>Support and Maintenance</h2>
+    
+    <h3>Service Level Agreement (SLA)</h3>
+    <table>
+        <tr>
+            <th>Service Component</th>
+            <th>Availability</th>
+            <th>Support Response</th>
+            <th>Resolution Time</th>
+        </tr>
+        <tr>
+            <td>Critical System Failure</td>
+            <td>99.9%</td>
+            <td>15 minutes</td>
+            <td>2 hours</td>
+        </tr>
+        <tr>
+            <td>Major Functionality Issue</td>
+            <td>99.5%</td>
+            <td>30 minutes</td>
+            <td>4 hours</td>
+        </tr>
+        <tr>
+            <td>Minor Issues & Enhancements</td>
+            <td>99.0%</td>
+            <td>2 hours</td>
+            <td>24 hours</td>
+        </tr>
+        <tr>
+            <td>Password and user reset</td>
+            <td>99.0%</td>
+            <td>5 Minutes</td>
+            <td>10 Minutes</td>
+        </tr>
+    </table>
+    
+    <h3>Contact Information</h3>
+    <table>
+        <tr>
+            <th>Support Type</th>
+            <th>Contact</th>
+            <th>Availability</th>
+        </tr>
+        <tr>
+            <td>Technical Support</td>
+            <td>IT Help Desk - extension 12273</td>
+            <td>Business Hours</td>
+        </tr>
+        <tr>
+            <td>System Administration</td>
+            <td>Infrastructure Team - extension 12273</td>
+            <td>Business Hours</td>
+        </tr>
+        <tr>
+            <td>Emergency Contact</td>
+            <td>On-call Support - 0703027000</td>
+            <td>24/7</td>
+        </tr>
+    </table>
+</div>
+
+<div class="footer">
+    <p><strong>Confidential Document</strong> - For authorized personnel only</p>
+    <p>Sacco Ticket Management System © 2025 Co-op Bank. All rights reserved.</p>
+    <p>Document Version: 1.0.0 | Last Updated: October 2025</p>
+</div>
+
+</body>
+</html>

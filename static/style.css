@@ -1,0 +1,409 @@
+/* Base font family for the entire application */
+.stApp {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Main header styling - positioned at the top */
+.main-header {
+    font-size: 2.5rem;
+    color: #ffffff;
+    text-align: center;
+    margin: 0;
+    padding: 1rem 1rem 0.5rem 1rem;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    background: rgb(17, 1, 81);
+    border-bottom: 2px solid #f0f0f0;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Metric cards */
+.metric-card {
+    background-color: #f0f2f6;
+    padding: 1rem;
+    border-radius: 10px;
+    border-left: 4px solid #1f77b4;
+    font-family: 'Arial', sans-serif;
+}
+
+.metric-value {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #005596;
+    font-family: 'Arial', sans-serif;
+}
+
+.metric-label {
+    font-size: 0.9rem;
+    color: #6c757d;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Ticket styling */
+.urgent-ticket {
+    border-left: 4px solid #ff4b4b !important;
+    font-family: 'Arial', sans-serif;
+}
+
+.high-priority {
+    border-left: 4px solid #ffa500 !important;
+    font-family: 'Arial', sans-serif;
+}
+
+.ai-insight {
+    background-color: #e8f4fd;
+    padding: 0.5rem;
+    border-radius: 5px;
+    margin: 0.5rem 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.closed-ticket {
+    background-color: #f0fff0 !important;
+    border-left: 4px solid #28a745 !important;
+    font-family: 'Arial', sans-serif;
+}
+
+/* KPI Cards */
+.kpi-card {
+    background: linear-gradient(135deg, #ffffff, #f9f9f9);
+    border: 1px solid #e0e0e0;
+    border-radius: 14px;
+    padding: 18px;
+    text-align: left;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    margin: 4px;
+    transition: all 0.2s ease-in-out;
+    font-family: 'Arial', sans-serif;
+}
+
+.kpi-card:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    transform: translateY(-2px);
+}
+
+.kpi-value {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 6px;
+    color: #2c3e50;
+    font-family: 'Arial', sans-serif;
+}
+
+.kpi-label {
+    font-size: 0.85rem;
+    color: #666;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Ticket cards */
+.ticket-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 16px;
+    background: #ffffff;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    font-family: 'Arial', sans-serif;
+}
+
+.ticket-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #1f77b4;
+    margin-bottom: 6px;
+    font-family: 'Arial', sans-serif;
+}
+
+.ticket-meta {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 6px;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Badges */
+.badge {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-right: 6px;
+    font-family: 'Arial', sans-serif;
+}
+
+.status-open { background: #f1c40f; color: black; font-family: 'Arial', sans-serif; }
+.status-closed { background: #2ecc71; color: white; font-family: 'Arial', sans-serif; }
+.urgency-urgent { background: #e74c3c; color: white; font-family: 'Arial', sans-serif; }
+.urgency-high { background: #e67e22; color: white; font-family: 'Arial', sans-serif; }
+.urgency-normal { background: #27ae60; color: white; font-family: 'Arial', sans-serif; }
+
+/* Tab styling */
+.stTabs [role="tablist"] {
+    justify-content: center;
+    gap: 15px;
+    font-family: 'Arial', sans-serif;
+}
+
+.stTabs [role="tab"] {
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-family: 'Arial', sans-serif;
+}
+
+.stTabs [role="tab"]:hover {
+    background-color: #EBF5FB;
+    color: #1B4F72;
+}
+
+.stTabs [aria-selected="true"] {
+    background: #2E86C1;
+    color: white;
+}
+
+/* Button styling */
+div.stButton > button {
+    background: #2E86C1;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    padding: 8px 20px;
+    transition: 0.3s;
+    font-family: 'Arial', sans-serif;
+}
+
+div.stButton > button:hover {
+    background: #1B4F72;
+    transform: scale(1.03);
+}
+
+/* Debug panel */
+.debug-panel {
+    background-color: #fff3cd;
+    border: 1px solid #ffeaa7;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.debug-info {
+    font-family: monospace;
+    font-size: 0.8rem;
+    color: #856404;
+}
+
+/* Form elements */
+.stTextInput > div > div > input {
+    font-family: 'Arial', sans-serif;
+}
+
+.stSelectbox > div > div > select {
+    font-family: 'Arial', sans-serif;
+}
+
+.stTextArea > div > div > textarea {
+    font-family: 'Arial', sans-serif;
+}
+
+/* Headers and text elements */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Arial', sans-serif;
+}
+
+p, span, div {
+    font-family: 'Arial', sans-serif;
+}
+
+/* Dataframe and table styling */
+.dataframe {
+    font-family: 'Arial', sans-serif;
+}
+
+.dataframe thead th {
+    font-family: 'Arial', sans-serif;
+}
+
+.dataframe tbody td {
+    font-family: 'Arial', sans-serif;
+}
+
+/* Alert and message styling */
+.stAlert {
+    font-family: 'Arial', sans-serif;
+}
+
+.stSuccess {
+    font-family: 'Arial', sans-serif;
+}
+
+.stError {
+    font-family: 'Arial', sans-serif;
+}
+
+.stWarning {
+    font-family: 'Arial', sans-serif;
+}
+
+.stInfo {
+    font-family: 'Arial', sans-serif;
+}
+
+/* Login page specific styles */
+.login-page {
+    font-family: 'Arial', sans-serif;
+}
+
+.modern-login-container {
+    font-family: 'Arial', sans-serif;
+}
+
+.login-card {
+    font-family: 'Arial', sans-serif;
+}
+
+.login-title {
+    font-family: 'Arial', sans-serif;
+}
+
+.login-subtitle {
+    font-family: 'Arial', sans-serif;
+}
+
+.form-section {
+    font-family: 'Arial', sans-serif;
+}
+
+.section-label {
+    font-family: 'Arial', sans-serif;
+}
+
+.section-description {
+    font-family: 'Arial', sans-serif;
+}
+
+.help-section {
+    font-family: 'Arial', sans-serif;
+}
+
+.help-content {
+    font-family: 'Arial', sans-serif;
+}
+
+/* Grafana-style elements */
+.grafana-header {
+    font-family: 'Arial', sans-serif;
+}
+
+.grafana-panel {
+    font-family: 'Arial', sans-serif;
+}
+
+.grafana-panel-header {
+    font-family: 'Arial', sans-serif;
+}
+
+.grafana-metric {
+    font-family: 'Arial', sans-serif;
+}
+
+/* Status indicators */
+.status-excellent { font-family: 'Arial', sans-serif; }
+.status-good { font-family: 'Arial', sans-serif; }
+.status-fair { font-family: 'Arial', sans-serif; }
+.status-poor { font-family: 'Arial', sans-serif; }
+.status-unknown { font-family: 'Arial', sans-serif; }
+
+/* Risk indicators */
+.risk-high { font-family: 'Arial', sans-serif; }
+.risk-medium { font-family: 'Arial', sans-serif; }
+.risk-low { font-family: 'Arial', sans-serif; }
+
+/* Trend indicators */
+.trend-indicator {
+    font-family: 'Arial', sans-serif;
+}
+
+.trend-up { font-family: 'Arial', sans-serif; }
+.trend-down { font-family: 'Arial', sans-serif; }
+.trend-stable { font-family: 'Arial', sans-serif; }
+
+/* Refresh indicators */
+.refresh-indicator {
+    font-family: 'Arial', sans-serif;
+}
+
+.refresh-active {
+    font-family: 'Arial', sans-serif;
+}
+
+.refresh-paused {
+    font-family: 'Arial', sans-serif;
+}
+
+/* Alert boxes */
+.alert-warning {
+    font-family: 'Arial', sans-serif;
+}
+
+.alert-success {
+    font-family: 'Arial', sans-serif;
+}
+
+.alert-ai {
+    font-family: 'Arial', sans-serif;
+}
+
+/* Recommendation list */
+.recommendation-list {
+    font-family: 'Arial', sans-serif;
+}
+
+/* Card styling */
+.card {
+    font-family: 'Arial', sans-serif;
+}
+
+.card-header {
+    font-family: 'Arial', sans-serif;
+}
+
+/* Footer */
+.footer {
+    font-family: 'Arial', sans-serif;
+}
+
+/* Ensure all Streamlit components use Arial */
+.stMarkdown {
+    font-family: 'Arial', sans-serif;
+}
+
+.stCaption {
+    font-family: 'Arial', sans-serif;
+}
+
+.stCode {
+    font-family: 'Arial', sans-serif;
+}
+
+.stLatex {
+    font-family: 'Arial', sans-serif;
+}
+
+/* Plotly chart text elements */
+.js-plotly-plot .plotly .main-svg {
+    font-family: 'Arial', sans-serif !important;
+}
+
+/* Ensure all text in the app uses Arial */
+* {
+    font-family: 'Arial', sans-serif;
+}

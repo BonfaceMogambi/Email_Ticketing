@@ -1,0 +1,18 @@
+# Create .gitignore file
+echo # Python > .gitignore
+echo __pycache__/ >> .gitignore
+echo *.py[cod] >> .gitignore
+echo *$py.class >> .gitignore
+echo .Python >> .gitignore
+echo venv/ >> .gitignore
+echo env/ >> .gitignore
+echo .env/ >> .gitignore
+echo >> .gitignore
+echo # Secrets >> .gitignore
+echo .env >> .gitignore
+echo *.crt >> .gitignore
+echo *.key >> .gitignore
+echo private_key.crt >> .gitignore
+echo certificate.crt >> .gitignore
+echo API.docx >> .gitignore
+.env
