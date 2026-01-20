@@ -15,4 +15,17 @@ echo *.key >> .gitignore
 echo private_key.crt >> .gitignore
 echo certificate.crt >> .gitignore
 echo API.docx >> .gitignore
+.env__pycache__/
+*.py[cod]
+*.class
+.Python
+venv/
+env/
+.env/
+
 .env
+*.crt
+*.key
+private_key.crt
+certificate.crt
+API.docx
